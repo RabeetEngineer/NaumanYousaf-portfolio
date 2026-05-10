@@ -1,0 +1,2152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nauman Yousaf — Pakistan Administrative Service Officer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #080f1e;
+        --navy-mid: #0d1a2e;
+        --navy-card: #0f1f38;
+        --blue-deep: #1e3a8a;
+        --blue-mid: #2563eb;
+        --blue-light: #3b82f6;
+        --blue-glow: rgba(59, 130, 246, 0.12);
+        --gold: #d4a843;
+        --gold-light: #f0c46a;
+        --gold-pale: rgba(212, 168, 67, 0.15);
+        --white: #f8f9fc;
+        --white-dim: rgba(248, 249, 252, 0.85);
+        --gray-soft: rgba(200, 210, 230, 0.55);
+        --gray-muted: rgba(160, 180, 210, 0.45);
+        --border: rgba(59, 130, 246, 0.18);
+        --border-gold: rgba(212, 168, 67, 0.25);
+        --font-display: "Cormorant Garamond", Georgia, serif;
+        --font-body: "Outfit", system-ui, sans-serif;
+        --transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        background: var(--navy);
+        color: var(--white);
+        font-family: var(--font-body);
+        line-height: 1.7;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ─── UTILITY ─────────────────────────────────────────── */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      .gold {
+        color: var(--gold);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .fade-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .fade-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .fade-delay-3 {
+        transition-delay: 0.3s;
+      }
+      .fade-delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      /* ─── NAV ──────────────────────────────────────────────── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1rem 0;
+        background: rgba(8, 15, 30, 0.88);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        transition: var(--transition);
+      }
+      nav .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-brand {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 1.25rem;
+        letter-spacing: 0.02em;
+        color: var(--white);
+        text-decoration: none;
+      }
+      .nav-brand span {
+        color: var(--gold);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        color: rgba(200, 210, 230, 0.75);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+      .nav-cta {
+        padding: 0.5rem 1.25rem;
+        border: 1px solid var(--gold);
+        color: var(--gold) !important;
+        border-radius: 2px;
+        transition: background 0.3s !important;
+      }
+      .nav-cta:hover {
+        background: var(--gold-pale) !important;
+        color: var(--gold-light) !important;
+      }
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background: var(--white);
+        margin: 5px 0;
+        transition: var(--transition);
+      }
+
+      /* ─── HERO ─────────────────────────────────────────────── */
+      #hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 7rem 0 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 70% 60% at 65% 50%,
+            rgba(30, 58, 138, 0.32) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 40% 40% at 20% 80%,
+            rgba(212, 168, 67, 0.06) 0%,
+            transparent 60%
+          ),
+          linear-gradient(135deg, #080f1e 0%, #0d1a2e 60%, #091526 100%);
+      }
+      .hero-grid-overlay {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(0, 0, 0, 0.5) 30%,
+          rgba(0, 0, 0, 0.5) 70%,
+          transparent
+        );
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding-left: 3rem;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 1rem;
+        border: 1px solid var(--border-gold);
+        background: var(--gold-pale);
+        border-radius: 2px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold-light);
+        margin-bottom: 1.5rem;
+      }
+      .hero-badge::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex-shrink: 0;
+      }
+      .hero-name {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.75rem;
+        color: #fff;
+      }
+      .hero-name em {
+        font-style: italic;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .hero-title {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--blue-light);
+        letter-spacing: 0.04em;
+        margin-bottom: 0.5rem;
+      }
+      .hero-subtitle {
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        font-weight: 400;
+        color: rgba(200, 215, 240, 0.75);
+        margin-bottom: 2.5rem;
+        font-style: italic;
+        max-width: 480px;
+      }
+      .hero-divider {
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), transparent);
+        margin-bottom: 2.5rem;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 2rem;
+        background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        border-radius: 2px;
+        border: 1px solid rgba(59, 130, 246, 0.4);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0);
+        transition: background 0.3s;
+      }
+      .btn-primary:hover::before {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 2rem;
+        border: 1px solid var(--border-gold);
+        color: var(--gold-light);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        border-radius: 2px;
+        background: transparent;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+      .btn-outline:hover {
+        background: var(--gold-pale);
+      }
+      .hero-image-wrap {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+      }
+      .hero-portrait-frame {
+        position: relative;
+        width: 380px;
+        height: 520px;
+      }
+      .hero-portrait-frame::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.5),
+          rgba(212, 168, 67, 0.3),
+          transparent
+        );
+        border-radius: 4px 4px 0 0;
+        z-index: 0;
+      }
+      .hero-portrait-frame::after {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 20px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(212, 168, 67, 0.2);
+        border-radius: 4px;
+        z-index: -1;
+      }
+      .hero-portrait {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 3px 3px 0 0;
+        position: relative;
+        z-index: 1;
+        display: block;
+        background: linear-gradient(180deg, #1a2f52 0%, #0d1a2e 100%);
+      }
+      .portrait-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #1e3a5a 0%, #0d1a2e 100%);
+        border-radius: 3px 3px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+      .portrait-placeholder-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(59, 130, 246, 0.15);
+        border: 2px solid rgba(59, 130, 246, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .portrait-placeholder-icon svg {
+        width: 48px;
+        height: 48px;
+        opacity: 0.5;
+      }
+      .portrait-placeholder p {
+        color: rgba(200, 215, 240, 0.4);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+      }
+      .hero-stat-strip {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(8, 15, 30, 0.85);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-gold);
+        display: flex;
+        z-index: 2;
+        border-radius: 0 0 3px 3px;
+      }
+      .hero-stat {
+        flex: 1;
+        padding: 0.85rem 0.5rem;
+        text-align: center;
+        border-right: 1px solid rgba(212, 168, 67, 0.1);
+      }
+      .hero-stat:last-child {
+        border-right: none;
+      }
+      .hero-stat-num {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--gold);
+        display: block;
+        line-height: 1;
+      }
+      .hero-stat-label {
+        font-size: 0.65rem;
+        color: rgba(200, 215, 240, 0.5);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* ─── SECTION TEMPLATE ─────────────────────────────────── */
+      section {
+        padding: 6rem 0;
+      }
+      .section-label {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .section-label::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 1px;
+        background: var(--gold);
+      }
+      .section-heading {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 600;
+        line-height: 1.1;
+        color: #fff;
+        margin-bottom: 1.25rem;
+      }
+      .section-heading em {
+        font-style: italic;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .section-sub {
+        font-size: 1rem;
+        color: rgba(180, 200, 230, 0.65);
+        max-width: 540px;
+        line-height: 1.8;
+      }
+
+      /* ─── ABOUT ────────────────────────────────────────────── */
+      #about {
+        background: var(--navy-mid);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .about-img-wrap {
+        position: relative;
+      }
+      .about-portrait {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 3px;
+        background: linear-gradient(160deg, #1e3a5a 0%, #0d1a2e 100%);
+        display: block;
+      }
+      .about-portrait-placeholder {
+        width: 100%;
+        aspect-ratio: 3/4;
+        background: linear-gradient(160deg, #1e3a5a 0%, #0d1a2e 100%);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+      }
+      .about-portrait-placeholder svg {
+        width: 64px;
+        height: 64px;
+        opacity: 0.3;
+      }
+      .about-img-badge {
+        position: absolute;
+        bottom: -1.5rem;
+        right: -1.5rem;
+        padding: 1.25rem 1.5rem;
+        background: linear-gradient(135deg, var(--blue-deep), #0d1a2e);
+        border: 1px solid var(--border-gold);
+        border-radius: 3px;
+        text-align: center;
+      }
+      .about-img-badge strong {
+        font-family: var(--font-display);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        display: block;
+        line-height: 1;
+      }
+      .about-img-badge span {
+        font-size: 0.72rem;
+        color: rgba(200, 215, 240, 0.6);
+        letter-spacing: 0.06em;
+      }
+      .about-content {
+        padding-top: 1rem;
+      }
+      .about-bio {
+        font-size: 1rem;
+        line-height: 1.9;
+        color: rgba(200, 215, 240, 0.75);
+        margin-bottom: 1.5rem;
+      }
+      .about-bio p + p {
+        margin-top: 1rem;
+      }
+      .about-highlights {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .highlight-item {
+        padding: 1rem 1.25rem;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--blue-light);
+        background: rgba(15, 31, 56, 0.5);
+        border-radius: 0 2px 2px 0;
+      }
+      .highlight-item strong {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--white);
+        letter-spacing: 0.02em;
+        margin-bottom: 0.2rem;
+      }
+      .highlight-item span {
+        font-size: 0.78rem;
+        color: rgba(160, 185, 220, 0.65);
+      }
+
+      /* ─── EXPERIENCE TIMELINE ──────────────────────────────── */
+      #experience {
+        background: var(--navy);
+      }
+      .exp-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .exp-header .section-label {
+        justify-content: center;
+      }
+      .exp-header .section-label::before {
+        display: none;
+      }
+      .timeline {
+        position: relative;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          var(--border) 10%,
+          var(--border) 90%,
+          transparent
+        );
+      }
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 60px 1fr;
+        gap: 0;
+        margin-bottom: 3.5rem;
+        position: relative;
+      }
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+      .timeline-content-left {
+        padding-right: 2.5rem;
+        text-align: right;
+      }
+      .timeline-content-right {
+        padding-left: 2.5rem;
+      }
+      .timeline-dot-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .timeline-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--navy);
+        border: 2px solid var(--blue-light);
+        margin-top: 0.35rem;
+        flex-shrink: 0;
+        transition: var(--transition);
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+      }
+      .timeline-item:hover .timeline-dot {
+        background: var(--blue-light);
+        box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.15);
+      }
+      .timeline-card {
+        background: var(--navy-card);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        padding: 1.5rem;
+        transition: var(--transition);
+      }
+      .timeline-item:hover .timeline-card {
+        border-color: rgba(59, 130, 246, 0.35);
+        background: rgba(15, 31, 56, 0.9);
+      }
+      .timeline-year {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.4rem;
+      }
+      .timeline-role {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--white);
+        line-height: 1.2;
+        margin-bottom: 0.25rem;
+      }
+      .timeline-org {
+        font-size: 0.8rem;
+        color: var(--blue-light);
+        letter-spacing: 0.04em;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .timeline-desc {
+        font-size: 0.875rem;
+        color: rgba(160, 185, 220, 0.7);
+        line-height: 1.75;
+      }
+      .timeline-tag {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 0.2rem 0.65rem;
+        background: rgba(30, 58, 138, 0.35);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        border-radius: 2px;
+        font-size: 0.7rem;
+        color: var(--blue-light);
+        letter-spacing: 0.05em;
+      }
+      .timeline-item.right .timeline-content-left {
+        order: 3;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 2.5rem;
+      }
+      .timeline-item.right .timeline-content-right {
+        order: 1;
+        padding-left: 0;
+        padding-right: 2.5rem;
+        text-align: right;
+      }
+      .timeline-item.right .timeline-dot-wrap {
+        order: 2;
+      }
+
+      /* ─── EXPERTISE ────────────────────────────────────────── */
+      #expertise {
+        background: var(--navy-mid);
+      }
+      .expertise-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 3rem;
+      }
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .expertise-card {
+        padding: 2rem 1.75rem;
+        background: rgba(15, 31, 56, 0.6);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .expertise-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--blue-deep), var(--blue-light));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+      .expertise-card:hover::before {
+        transform: scaleX(1);
+      }
+      .expertise-card:hover {
+        border-color: rgba(59, 130, 246, 0.3);
+        background: rgba(15, 31, 56, 0.85);
+        transform: translateY(-3px);
+      }
+      .expertise-icon {
+        width: 44px;
+        height: 44px;
+        background: rgba(30, 58, 138, 0.3);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+      }
+      .expertise-icon svg {
+        width: 22px;
+        height: 22px;
+        stroke: var(--blue-light);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .expertise-name {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 0.6rem;
+      }
+      .expertise-desc {
+        font-size: 0.85rem;
+        color: rgba(160, 185, 220, 0.65);
+        line-height: 1.75;
+      }
+      .expertise-card:nth-child(4),
+      .expertise-card:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      /* ─── ACHIEVEMENTS ─────────────────────────────────────── */
+      #achievements {
+        background: linear-gradient(
+          135deg,
+          var(--blue-deep) 0%,
+          #0e2356 50%,
+          var(--navy) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+      #achievements::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+          );
+        background-size: 40px 40px;
+      }
+      .achievements-inner {
+        position: relative;
+        z-index: 1;
+      }
+      .achievements-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .achievements-header .section-label {
+        justify-content: center;
+      }
+      .achievements-header .section-label::before {
+        display: none;
+      }
+      .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+      .achievement-card {
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        transition: var(--transition);
+      }
+      .achievement-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-4px);
+      }
+      .achievement-num {
+        font-family: var(--font-display);
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .achievement-suffix {
+        font-family: var(--font-display);
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--gold-light);
+      }
+      .achievement-label {
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(200, 220, 255, 0.7);
+        line-height: 1.4;
+      }
+      .achievement-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 1.5rem;
+        background: rgba(212, 168, 67, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .achievement-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 1.5;
+      }
+
+      /* ─── IMPACT ────────────────────────────────────────────── */
+      #impact {
+        background: var(--navy);
+      }
+      .impact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .impact-card {
+        padding: 2.25rem;
+        background: var(--navy-card);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        position: relative;
+        overflow: hidden;
+        transition: var(--transition);
+      }
+      .impact-card:hover {
+        border-color: rgba(212, 168, 67, 0.25);
+        transform: translateY(-3px);
+      }
+      .impact-num {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+      .impact-category {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--blue-light);
+        margin-bottom: 0.75rem;
+      }
+      .impact-title {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--white);
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+      }
+      .impact-desc {
+        font-size: 0.85rem;
+        color: rgba(160, 185, 220, 0.65);
+        line-height: 1.8;
+      }
+      .impact-corner {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(
+          circle at 100% 100%,
+          rgba(30, 58, 138, 0.25),
+          transparent
+        );
+      }
+
+      /* ─── CONTACT ───────────────────────────────────────────── */
+      #contact {
+        background: var(--navy-mid);
+        border-top: 1px solid var(--border);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .contact-detail {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+      }
+      .contact-detail:first-of-type {
+        border-top: 1px solid rgba(59, 130, 246, 0.1);
+      }
+      .contact-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+        background: rgba(30, 58, 138, 0.3);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .contact-icon svg {
+        width: 18px;
+        height: 18px;
+        stroke: var(--blue-light);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .contact-label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(160, 185, 220, 0.5);
+        margin-bottom: 0.2rem;
+      }
+      .contact-value {
+        font-size: 0.95rem;
+        color: var(--white-dim);
+      }
+      .contact-panel {
+        background: var(--navy-card);
+        border: 1px solid var(--border-gold);
+        border-radius: 3px;
+        padding: 2.5rem;
+      }
+      .contact-panel h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 0.75rem;
+      }
+      .contact-panel p {
+        font-size: 0.9rem;
+        color: rgba(160, 185, 220, 0.65);
+        line-height: 1.8;
+        margin-bottom: 1.75rem;
+      }
+      .contact-affil {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: rgba(30, 58, 138, 0.2);
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        margin-bottom: 0.75rem;
+      }
+      .contact-affil-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex-shrink: 0;
+      }
+      .contact-affil-text {
+        font-size: 0.8rem;
+        color: rgba(200, 215, 240, 0.8);
+      }
+
+      /* ─── FOOTER ─────────────────────────────────────────────── */
+      footer {
+        background: var(--navy);
+        border-top: 1px solid rgba(59, 130, 246, 0.08);
+        padding: 2.5rem 0;
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-brand {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgba(200, 215, 240, 0.6);
+      }
+      .footer-brand span {
+        color: var(--gold);
+      }
+      .footer-note {
+        font-size: 0.78rem;
+        color: rgba(160, 185, 220, 0.35);
+        letter-spacing: 0.04em;
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .footer-links a {
+        font-size: 0.8rem;
+        color: rgba(160, 185, 220, 0.4);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--gold);
+      }
+
+      /* ─── MOBILE MENU ─────────────────────────────────────────── */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 99;
+        background: rgba(8, 15, 30, 0.97);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .mobile-menu.open {
+        display: flex;
+      }
+      .mobile-menu a {
+        font-family: var(--font-display);
+        font-size: 2rem;
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .mobile-menu a:hover {
+        color: var(--gold);
+      }
+      .mobile-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        color: var(--white-dim);
+      }
+
+      /* ─── RESPONSIVE ─────────────────────────────────────────── */
+      @media (max-width: 1024px) {
+        .expertise-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .achievements-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .impact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 900px) {
+        #hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding-bottom: 3rem;
+        }
+        .hero-content {
+          padding-left: 0;
+          order: 2;
+        }
+        .hero-subtitle {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-btns {
+          justify-content: center;
+        }
+        .hero-image-wrap {
+          order: 1;
+          margin-bottom: 3rem;
+        }
+        .hero-portrait-frame {
+          width: 280px;
+          height: 380px;
+        }
+        .hero-portrait-frame::after {
+          display: none;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .about-img-badge {
+          right: 0;
+        }
+        .timeline::before {
+          left: 24px;
+        }
+        .timeline-item {
+          grid-template-columns: 48px 1fr;
+        }
+        .timeline-content-left {
+          display: none;
+        }
+        .timeline-content-right {
+          padding-left: 1.5rem;
+          grid-column: 2;
+        }
+        .timeline-dot-wrap {
+          align-items: flex-start;
+        }
+        .timeline-item.right .timeline-content-left {
+          display: none;
+        }
+        .timeline-item.right .timeline-content-right {
+          order: 2;
+          padding-right: 0;
+          padding-left: 1.5rem;
+          text-align: left;
+        }
+        .timeline-item.right .timeline-dot-wrap {
+          order: 1;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .expertise-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: block;
+        }
+      }
+
+      @media (max-width: 640px) {
+        section {
+          padding: 4rem 0;
+        }
+        .expertise-grid {
+          grid-template-columns: 1fr;
+        }
+        .achievements-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .impact-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-highlights {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+        .footer-links {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="main-nav">
+      <div class="inner">
+        <a href="#hero" class="nav-brand">Nauman <span>Yousaf</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="ham-btn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button class="mobile-close" id="mobile-close">✕</button>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#experience" onclick="closeMobile()">Experience</a>
+      <a href="#expertise" onclick="closeMobile()">Expertise</a>
+      <a href="#achievements" onclick="closeMobile()">Achievements</a>
+      <a href="#impact" onclick="closeMobile()">Impact</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid-overlay"></div>
+
+      <div
+        class="hero-content container"
+        style="grid-column: 1; padding-right: 1rem"
+      >
+        <div class="hero-badge fade-in">
+          Pakistan Administrative Service · BS-19 Officer
+        </div>
+
+        <h1 class="hero-name fade-in fade-delay-1">
+          Nauman<br /><em>Yousaf</em>
+        </h1>
+
+        <p class="hero-title fade-in fade-delay-2">
+          Special Secretary (Budget) · Finance Department, Government of the
+          Punjab
+        </p>
+
+        <div class="hero-divider fade-in fade-delay-2"></div>
+
+        <p class="hero-subtitle fade-in fade-delay-2">
+          Public Financial Management &amp; Government Policy Expert
+        </p>
+
+        <div class="hero-btns fade-in fade-delay-3">
+          <a href="#about" class="btn-primary">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 21a8 8 0 1 0-16 0" />
+            </svg>
+            View Profile
+          </a>
+          <button class="btn-outline" onclick="window.print()">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download CV
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap fade-in fade-delay-2">
+        <div class="hero-portrait-frame">
+          <!-- Replace with actual image: <img src="/assets/images/nauman-yousaf.jpg" alt="Nauman Yousaf" class="hero-portrait"> -->
+          <img
+            src="/nauman_yousaf.jpeg"
+            alt="Nauman Yousaf"
+            class="hero-portrait"
+          />
+          <div class="hero-stat-strip">
+            <div class="hero-stat">
+              <span class="hero-stat-num"
+                >36<sup style="font-size: 0.7em">th</sup></span
+              >
+              <span class="hero-stat-label">CTP Batch</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">BS-19</span>
+              <span class="hero-stat-label">Pay Scale</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">PAS</span>
+              <span class="hero-stat-label">Service Group</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Image side -->
+          <div class="about-img-wrap fade-in">
+            <!-- Replace with actual image: <img src="/assets/images/nauman-yousaf-about.jpg" alt="Nauman Yousaf" class="about-portrait"> -->
+
+            <div class="about-portrait-placeholder">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(200,215,240,0.25)"
+                stroke-width="1"
+              >
+                <circle cx="12" cy="8" r="5" />
+                <path d="M3 21a9 9 0 0 1 18 0" />
+              </svg>
+            </div>
+            <div class="about-img-badge">
+              <strong>36<sup style="font-size: 0.5em">th</sup></strong>
+              <span>Common Training<br />Programme · PAS</span>
+            </div>
+          </div>
+
+          <!-- Content side -->
+          <div class="about-content">
+            <div class="section-label fade-in">About the Officer</div>
+            <h2 class="section-heading fade-in fade-delay-1">
+              A Career Built on <em>Fiscal Stewardship</em>
+            </h2>
+            <div class="about-bio fade-in fade-delay-2">
+              <p>
+                Nauman Yousaf is a distinguished officer of the Pakistan
+                Administrative Service (PAS), having commenced his public
+                service through the 36th Common Training Programme. With a
+                career anchored in the Government of Punjab's Finance
+                Department, he has become one of the province's foremost
+                authorities on public financial management and fiscal
+                governance.
+              </p>
+              <p>
+                Currently serving as Special Secretary (Budget) in the Finance
+                Department, Government of the Punjab, he sits at the nexus of
+                provincial fiscal planning — overseeing the formulation,
+                presentation, and execution of the annual Punjab budget cycle
+                and ensuring rigorous expenditure discipline across all line
+                departments.
+              </p>
+              <p>
+                Earlier, as Ex-Chairperson of the Punjab Revenue Authority
+                (PRA), he spearheaded transformative revenue policy reforms and
+                digital modernisation of services tax administration. As CEO of
+                Punjab Financial Advisory Services (PFAS) and Ex-Officio Board
+                Member of Punjab Thermal Power Limited (PTPL), he extended his
+                governance expertise across financial strategy and the energy
+                sector.
+              </p>
+            </div>
+
+            <div class="about-highlights fade-in fade-delay-3">
+              <div class="highlight-item">
+                <strong>Special Secretary (Budget) · Finance Dept.</strong>
+                <span>Government of the Punjab — Current Position</span>
+              </div>
+              <div class="highlight-item">
+                <strong>CEO · PFAS</strong>
+                <span>Punjab Financial Advisory Services</span>
+              </div>
+              <div class="highlight-item">
+                <strong>Ex-Chairperson · PRA</strong>
+                <span>Punjab Revenue Authority — Tax policy leadership</span>
+              </div>
+              <div class="highlight-item">
+                <strong>Board Member · PTPL</strong>
+                <span>Punjab Thermal Power Limited (Ex-Officio)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="exp-header">
+          <div class="section-label fade-in">Career Timeline</div>
+          <h2 class="section-heading fade-in fade-delay-1">
+            Professional <em>Journey</em>
+          </h2>
+          <p
+            class="section-sub fade-in fade-delay-2"
+            style="margin: 0 auto; text-align: center"
+          >
+            A chronicle of executive leadership across Punjab's most
+            consequential financial institutions.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: Left — CURRENT -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content-left">
+              <div class="timeline-card">
+                <div class="timeline-year">Current Position</div>
+                <div class="timeline-role">Special Secretary (Budget)</div>
+                <div class="timeline-org">
+                  Finance Department, Government of the Punjab
+                </div>
+                <div class="timeline-desc">
+                  Overseeing the complete provincial budget cycle — from
+                  strategic preparation and legislative presentation to
+                  execution monitoring and inter-departmental coordination.
+                  Ensuring fiscal discipline and transparent resource allocation
+                  across all line departments of the Punjab government.
+                </div>
+                <span class="timeline-tag">Budget Management</span>
+              </div>
+            </div>
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content-right"></div>
+          </div>
+
+          <!-- Item 2: Right — PFAS CEO -->
+          <div class="timeline-item right fade-in fade-delay-1">
+            <div class="timeline-content-left">
+              <div class="timeline-card">
+                <div class="timeline-year">Concurrent Role</div>
+                <div class="timeline-role">Chief Executive Officer</div>
+                <div class="timeline-org">
+                  Punjab Financial Advisory Services (PFAS)
+                </div>
+                <div class="timeline-desc">
+                  Steering strategic financial advisory operations for the
+                  Government of Punjab, directing investment planning, fiscal
+                  analysis, and policy advisory services supporting provincial
+                  economic decision-making.
+                </div>
+                <span class="timeline-tag">Financial Strategy</span>
+              </div>
+            </div>
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content-right">
+              <div class="timeline-card">
+                <div class="timeline-year">Concurrent Role</div>
+                <div class="timeline-role">Chief Executive Officer</div>
+                <div class="timeline-org">
+                  Punjab Financial Advisory Services (PFAS)
+                </div>
+                <div class="timeline-desc">
+                  Steering strategic financial advisory operations for the
+                  Government of Punjab, directing investment planning, fiscal
+                  analysis, and policy advisory services supporting provincial
+                  economic decision-making.
+                </div>
+                <span class="timeline-tag">Financial Strategy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Left — Ex-Chairperson PRA -->
+          <div class="timeline-item fade-in fade-delay-2">
+            <div class="timeline-content-left">
+              <div class="timeline-card">
+                <div class="timeline-year">Previous Role</div>
+                <div class="timeline-role">Ex-Chairperson</div>
+                <div class="timeline-org">Punjab Revenue Authority (PRA)</div>
+                <div class="timeline-desc">
+                  Led Punjab's premier revenue collection body, responsible for
+                  administering and enforcing services tax regulations, revenue
+                  optimisation, and digital transformation of tax collection
+                  systems across the province.
+                </div>
+                <span class="timeline-tag">Revenue Administration</span>
+              </div>
+            </div>
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content-right"></div>
+          </div>
+
+          <!-- Item 4: Right -->
+          <div class="timeline-item right fade-in fade-delay-3">
+            <div class="timeline-content-left">
+              <div class="timeline-card">
+                <div class="timeline-year">Board Role</div>
+                <div class="timeline-role">Ex-Officio Board Member</div>
+                <div class="timeline-org">
+                  Punjab Thermal Power Limited (PTPL)
+                </div>
+                <div class="timeline-desc">
+                  Serving in an advisory governance capacity on the board of
+                  Punjab's public sector energy company, providing financial
+                  oversight and policy guidance aligned with the province's
+                  energy and development objectives.
+                </div>
+                <span class="timeline-tag">Corporate Governance</span>
+              </div>
+            </div>
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content-right">
+              <div class="timeline-card">
+                <div class="timeline-year">Board Role</div>
+                <div class="timeline-role">Ex-Officio Board Member</div>
+                <div class="timeline-org">
+                  Punjab Thermal Power Limited (PTPL)
+                </div>
+                <div class="timeline-desc">
+                  Serving in an advisory governance capacity on the board of
+                  Punjab's public sector energy company, providing financial
+                  oversight and policy guidance aligned with the province's
+                  energy and development objectives.
+                </div>
+                <span class="timeline-tag">Corporate Governance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Left — Foundation -->
+          <div class="timeline-item fade-in fade-delay-4">
+            <div class="timeline-content-left">
+              <div class="timeline-card">
+                <div class="timeline-year">Foundation</div>
+                <div class="timeline-role">PAS Officer Induction</div>
+                <div class="timeline-org">
+                  36th Common Training Programme · Civil Services Academy
+                </div>
+                <div class="timeline-desc">
+                  Successfully inducted into the elite Pakistan Administrative
+                  Service through the 36th Common Training Programme, the
+                  foundational milestone of a distinguished career in federal
+                  and provincial public service.
+                </div>
+                <span class="timeline-tag">PAS · Civil Services</span>
+              </div>
+            </div>
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content-right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise">
+      <div class="container">
+        <div class="expertise-header">
+          <div>
+            <div class="section-label fade-in">Areas of Expertise</div>
+            <h2 class="section-heading fade-in fade-delay-1">
+              Core <em>Competencies</em>
+            </h2>
+          </div>
+          <p
+            class="section-sub fade-in fade-delay-2"
+            style="max-width: 320px; text-align: right"
+          >
+            Specialised domains shaping Punjab's fiscal architecture.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <div class="expertise-card fade-in">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div class="expertise-name">Public Financial Management</div>
+            <div class="expertise-desc">
+              Comprehensive expertise in government expenditure planning, fiscal
+              discipline, financial reporting standards, and public sector
+              accounting frameworks aligned with international best practices.
+            </div>
+          </div>
+
+          <div class="expertise-card fade-in fade-delay-1">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <div class="expertise-name">Budget Planning &amp; Execution</div>
+            <div class="expertise-desc">
+              End-to-end management of the provincial budget cycle — strategic
+              preparation, legislative presentation, departmental coordination,
+              and post-allocation performance monitoring and evaluation.
+            </div>
+          </div>
+
+          <div class="expertise-card fade-in fade-delay-2">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <div class="expertise-name">Revenue Policy &amp; Taxation</div>
+            <div class="expertise-desc">
+              Designing and implementing provincial tax policy frameworks,
+              services tax administration, enforcement strategy, and digital
+              revenue collection modernisation at the Punjab Revenue Authority.
+            </div>
+          </div>
+
+          <div class="expertise-card fade-in fade-delay-1">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div class="expertise-name">Institutional Governance</div>
+            <div class="expertise-desc">
+              Board-level advisory and executive oversight across public sector
+              institutions, ensuring alignment with government mandates,
+              corporate governance standards, and public accountability
+              frameworks.
+            </div>
+          </div>
+
+          <div class="expertise-card fade-in fade-delay-2">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="expertise-name">Economic Policy Advisory</div>
+            <div class="expertise-desc">
+              Providing high-level economic analysis and strategic counsel to
+              support provincial policy formulation, investment decisions, and
+              development planning at the Government of Punjab.
+            </div>
+          </div>
+
+          <div class="expertise-card fade-in fade-delay-3">
+            <div class="expertise-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="expertise-name">Government Financial Reforms</div>
+            <div class="expertise-desc">
+              Leading transformational reform initiatives in public sector
+              financial management — digitisation of revenue systems,
+              expenditure rationalisation, and systemic improvement of fiscal
+              processes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <div class="container achievements-inner">
+        <div class="achievements-header">
+          <div class="section-label fade-in">By the Numbers</div>
+          <h2 class="section-heading fade-in fade-delay-1">
+            Achievements in <em>Service</em>
+          </h2>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card fade-in">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+            </div>
+            <span class="achievement-num"
+              ><span class="counter" data-target="15">0</span
+              ><span class="achievement-suffix">+</span></span
+            >
+            <div class="achievement-label">
+              Years of Distinguished<br />Government Service
+            </div>
+          </div>
+
+          <div class="achievement-card fade-in fade-delay-1">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              </svg>
+            </div>
+            <span class="achievement-num"
+              ><span class="counter" data-target="4">0</span
+              ><span class="achievement-suffix">+</span></span
+            >
+            <div class="achievement-label">
+              Major Institutions<br />Led or Governed
+            </div>
+          </div>
+
+          <div class="achievement-card fade-in fade-delay-2">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <span class="achievement-num"
+              ><span class="counter" data-target="20">0</span
+              ><span class="achievement-suffix">+</span></span
+            >
+            <div class="achievement-label">
+              Revenue &amp; Fiscal<br />Policy Initiatives
+            </div>
+          </div>
+
+          <div class="achievement-card fade-in fade-delay-3">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+              </svg>
+            </div>
+            <span class="achievement-num"
+              ><span class="counter" data-target="36">0</span
+              ><span class="achievement-suffix">th</span></span
+            >
+            <div class="achievement-label">
+              Common Training<br />Programme · PAS
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact">
+      <div class="container">
+        <div style="margin-bottom: 3.5rem">
+          <div class="section-label fade-in">Key Contributions</div>
+          <h2 class="section-heading fade-in fade-delay-1">
+            Fiscal <em>Impact &amp; Reforms</em>
+          </h2>
+          <p class="section-sub fade-in fade-delay-2">
+            Initiatives and reforms that have reshaped Punjab's financial
+            governance landscape.
+          </p>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card fade-in">
+            <div class="impact-category">Revenue Administration</div>
+            <div class="impact-num">PRA</div>
+            <div class="impact-title">Services Tax Modernisation</div>
+            <div class="impact-desc">
+              Led comprehensive reforms at the Punjab Revenue Authority to
+              modernise services tax collection, expand the tax net, and
+              implement digital filing systems — significantly enhancing
+              provincial revenue generation capacity.
+            </div>
+            <div class="impact-corner"></div>
+          </div>
+
+          <div class="impact-card fade-in fade-delay-1">
+            <div class="impact-category">Budget Management</div>
+            <div class="impact-num">FD</div>
+            <div class="impact-title">Provincial Budget Efficiency</div>
+            <div class="impact-desc">
+              As Special Secretary Finance (Budget), implemented structural
+              improvements in the annual provincial budget preparation cycle —
+              strengthening inter-departmental coordination, reducing
+              expenditure overruns, and improving fiscal reporting transparency.
+            </div>
+            <div class="impact-corner"></div>
+          </div>
+
+          <div class="impact-card fade-in fade-delay-2">
+            <div class="impact-category">Strategic Advisory</div>
+            <div class="impact-num">PFAS</div>
+            <div class="impact-title">Financial Advisory Framework</div>
+            <div class="impact-desc">
+              As CEO of Punjab Financial Advisory Services, built an
+              institutional advisory framework supporting GoP's financial
+              decision-making — enabling evidence-based investment planning and
+              long-term fiscal sustainability strategies.
+            </div>
+            <div class="impact-corner"></div>
+          </div>
+
+          <div class="impact-card fade-in fade-delay-1">
+            <div class="impact-category">Governance &amp; Oversight</div>
+            <div class="impact-num">PTPL</div>
+            <div class="impact-title">Energy Sector Governance</div>
+            <div class="impact-desc">
+              Extended public financial management expertise into the energy
+              sector through board-level governance of Punjab Thermal Power
+              Limited — ensuring fiscal accountability, strategic alignment, and
+              effective oversight of public energy assets.
+            </div>
+            <div class="impact-corner"></div>
+          </div>
+
+          <div class="impact-card fade-in fade-delay-2">
+            <div class="impact-category">Institutional Reform</div>
+            <div class="impact-num">GoP</div>
+            <div class="impact-title">Digital Revenue Systems</div>
+            <div class="impact-desc">
+              Championed the digitalisation of provincial revenue administration
+              — transitioning manual tax processes to automated digital
+              platforms, improving compliance rates, reducing evasion, and
+              enhancing taxpayer experience at PRA.
+            </div>
+            <div class="impact-corner"></div>
+          </div>
+
+          <div class="impact-card fade-in fade-delay-3">
+            <div class="impact-category">Policy Development</div>
+            <div class="impact-num">PAS</div>
+            <div class="impact-title">Cross-Departmental Coordination</div>
+            <div class="impact-desc">
+              Leveraged PAS seniority and institutional networks to facilitate
+              effective coordination across Punjab's finance, planning, and
+              revenue departments — ensuring cohesive fiscal policy
+              implementation across the provincial government apparatus.
+            </div>
+            <div class="impact-corner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div style="margin-bottom: 3.5rem">
+          <div class="section-label fade-in">Get in Touch</div>
+          <h2 class="section-heading fade-in fade-delay-1">
+            Official <em>Contact</em>
+          </h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="fade-in">
+            <p
+              style="
+                color: rgba(180, 200, 230, 0.7);
+                line-height: 1.9;
+                margin-bottom: 2rem;
+                font-size: 0.95rem;
+              "
+            >
+              For official correspondence, institutional enquiries, and
+              professional engagements related to public financial management,
+              revenue policy, or government advisory services, please use the
+              channels below.
+            </p>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Official Email</div>
+                <div class="contact-value">nauman.yousaf@punjab.gov.pk</div>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Office</div>
+                <div class="contact-value">
+                  Finance Department, Government of the Punjab, Lahore
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Jurisdiction</div>
+                <div class="contact-value">Government of Punjab, Pakistan</div>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Service Group</div>
+                <div class="contact-value">
+                  Pakistan Administrative Service (PAS) · BS-19
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-panel fade-in fade-delay-2">
+            <h3>Official Affiliations</h3>
+            <p>
+              Nauman Yousaf currently serves across the following institutional
+              bodies on behalf of the Government of Punjab.
+            </p>
+
+            <div class="contact-affil">
+              <div class="contact-affil-dot"></div>
+              <div class="contact-affil-text">
+                <strong>Finance Department, Government of the Punjab</strong> —
+                Special Secretary (Budget)
+              </div>
+            </div>
+            <div class="contact-affil">
+              <div class="contact-affil-dot"></div>
+              <div class="contact-affil-text">
+                <strong>Punjab Financial Advisory Services (PFAS)</strong> —
+                Chief Executive Officer
+              </div>
+            </div>
+            <div class="contact-affil">
+              <div class="contact-affil-dot"></div>
+              <div class="contact-affil-text">
+                <strong>Punjab Revenue Authority (PRA)</strong> — Ex-Chairperson
+              </div>
+            </div>
+            <div class="contact-affil">
+              <div class="contact-affil-dot"></div>
+              <div class="contact-affil-text">
+                <strong>Punjab Thermal Power Limited (PTPL)</strong> —
+                Ex-Officio Board Member
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 2rem;
+                padding: 1rem 1.25rem;
+                background: rgba(212, 168, 67, 0.06);
+                border: 1px solid rgba(212, 168, 67, 0.2);
+                border-radius: 2px;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: rgba(212, 168, 67, 0.75);
+                  margin: 0;
+                  line-height: 1.7;
+                "
+              >
+                <strong style="color: var(--gold)">Note:</strong> This is an
+                official public profile of a Government of Punjab officer. All
+                enquiries of official nature should be directed through
+                institutional channels only.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          Nauman <span>Yousaf</span> &nbsp;·&nbsp;
+          <span style="font-size: 0.85em; color: rgba(160, 185, 220, 0.4)"
+            >PAS Officer</span
+          >
+        </div>
+        <div class="footer-note">
+          Government of Punjab · Pakistan Administrative Service · BS-19
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Top</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Intersection Observer — fade-in
+      const fadeEls = document.querySelectorAll(".fade-in");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+      fadeEls.forEach((el) => obs.observe(el));
+
+      // Animated counters
+      function animateCounter(el) {
+        const target = parseInt(el.dataset.target);
+        const duration = 1800;
+        const start = performance.now();
+        const update = (now) => {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(ease * target);
+          if (progress < 1) requestAnimationFrame(update);
+          else el.textContent = target;
+        };
+        requestAnimationFrame(update);
+      }
+
+      const counterObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && !e.target.dataset.animated) {
+              e.target.dataset.animated = true;
+              animateCounter(e.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      document
+        .querySelectorAll(".counter")
+        .forEach((el) => counterObs.observe(el));
+
+      // Hamburger
+      const hamBtn = document.getElementById("ham-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileClose = document.getElementById("mobile-close");
+      hamBtn.addEventListener("click", () => mobileMenu.classList.add("open"));
+      mobileClose.addEventListener("click", () =>
+        mobileMenu.classList.remove("open"),
+      );
+      function closeMobile() {
+        mobileMenu.classList.remove("open");
+      }
+
+      // Nav scroll effect
+      const nav = document.getElementById("main-nav");
+      window.addEventListener("scroll", () => {
+        nav.style.boxShadow =
+          window.scrollY > 60 ? "0 4px 32px rgba(0,0,0,0.4)" : "none";
+      });
+
+      // Trigger visible for hero items immediately
+      document.querySelectorAll("#hero .fade-in").forEach((el, i) => {
+        setTimeout(() => el.classList.add("visible"), i * 140);
+      });
+    </script>
+  </body>
+</html>
